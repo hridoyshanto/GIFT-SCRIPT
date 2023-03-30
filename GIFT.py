@@ -4,7 +4,7 @@ import os,sys,time,json,random,re,string,platform,base64,uuid
 os.system("git pull")
 from bs4 import BeautifulSoup as sop
 from bs4 import BeautifulSoup
-import requests as ress
+ #import requests as ress
 from datetime import date
 from datetime import datetime
 from time import sleep
@@ -24,7 +24,7 @@ def cek_apk(session,coki):
     x = sop.find("form",method="post")
     game = [i.text for i in x.find_all("h3")]
     if len(game)==0:
-        print(f'\r%s[%s!%s] %sSorry there is no Active  Apk%s  '%(N,M,N,M,N))
+        #print(f'\r%s[%s!%s] %sSorry there is no Active  Apk%s  '%(N,M,N,M,N))
     else:
         print(f'\r[🌺] %s \x1b[1;95m  Your Active Apps      :{WHITE}'%(GREEN))
         for i in range(len(game)):
@@ -102,9 +102,9 @@ logo =("""\033[0;92m
 \033[0;93m╠══[Author:=======================> \33[1;38mMR. SHANTO\33[1;38m       ║\033[1;31m
 ╠══[Facebook:=====================> SHANTO MAFIA      ║  \033[1;97m
 ╠══[Github:=======================> \33[1;38mSHANTO-MAFIA      ║\33[1;34m
-╠══[Whatsapp:=====================> 01608843956     ║\33[1;35m
+╠══[Whatsapp:=====================> 01812631929     ║\33[1;35m
 ╠══[TOOLS:========================> Random Cloning  ║ \33[1;32m
-╠══[VERSION:======================> 1.0.2           ║\033[1;35m
+╠══[VERSION:======================> 0.1          ║\033[1;35m
 \033[0;92m╚═══════════════════════════════════════════════════╝\033[1;31m
     """) 
 loop = 0
